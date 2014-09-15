@@ -69,7 +69,7 @@ void mag_hmc58xx_module_event(void) {
     // unscaled vector
     VECT3_COPY(imu.mag_unscaled, mag);
     // scale vector
-    ImuScaleMag(imu);
+    imu_scale_mag(&imu);
     // update ahrs
     if (ahrs.status == AHRS_RUNNING) {
       ahrs_update_mag();
