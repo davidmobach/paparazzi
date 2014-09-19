@@ -194,6 +194,12 @@
     <!-- Good weather -->
     <define name="MAX_BANK" value="10" unit="deg"/>
     <!-- Bad weather -->
+   <!-- reference model -->
+    <define name="REF_OMEGA" value="RadOfDeg(67.)"/>
+    <define name="REF_ZETA" value="0.85"/>
+    <define name="REF_MAX_ACCEL" value=".3"/>
+    <define name="REF_MAX_SPEED" value=".3"/>
+
     <!-- define name="MAX_BANK" value="32" unit="deg"/ -->
     <define name="PGAIN" value="79"/>
     <define name="DGAIN" value="100"/>
