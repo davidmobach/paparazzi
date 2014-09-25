@@ -1,7 +1,5 @@
 <!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
 
-<!-- Flying at 1 meters -->
-
 <flight_plan alt="148" ground_alt="147" lat0="51.990632" lon0="4.376789" max_dist_from_home="150" name="Rotorcraft Basic (Enac)" security_height="2">
   <header>
 #include "autopilot.h"
@@ -11,10 +9,10 @@
     <waypoint name="CLIMB" x="0.0" y="5.0"/>
     <waypoint name="STDBY" x="-2.0" y="-5.0"/>
     <waypoint name="TD" x="5.6" y="-10.9"/>
-    <waypoint name="FLY1" x="0.5" y="4.0"/>
-    <waypoint name="FLY2" x="2.5" y="0.7"/>
-    <waypoint name="FLY3" x="-1.8" y="-2.3"/>
-    <waypoint name="FLY4" x="-4.6" y="1.9"/>
+    <waypoint name="FLY1" x="-0.2" y="3.7"/>
+    <waypoint name="FLY2" x="1.7" y="0.5"/>
+    <waypoint name="FLY3" x="-1.8" y="-1.7"/>
+    <waypoint name="FLY4" x="-3.8" y="1.5"/>
     <waypoint lat="51.990639" lon="4.376807" name="p1"/>
     <waypoint lat="51.990639" lon="4.376807" name="p2"/>
     <waypoint lat="51.990639" lon="4.376807" name="p3"/>
@@ -52,7 +50,6 @@
     </block>
     <block name="Geo init">
       <while cond="LessThan(NavBlockTime(), 10)"/>
-      <!-- <call fun="NavSetWaypointHere(WP_HOME)"/>-->
       <call fun="NavSetWaypointHere(WP_CLIMB)"/>
       <call fun="NavSetWaypointHere(WP_STDBY)"/>
       <call fun="NavSetWaypointHere(WP_TD)"/>

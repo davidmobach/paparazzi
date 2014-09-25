@@ -8,6 +8,11 @@
     <waypoint name="HOME" x="-9.3" y="90.2"/>
     <waypoint name="CLIMB" x="2213.1" y="1516.9"/>
     <waypoint name="STDBY" x="-293.5" y="3050.3"/>
+    <waypoint name="A" x="-4032.9" y="-112.2"/>
+    <waypoint name="B" x="-20140.8" y="-19881.0"/>
+    <waypoint name="CAM" x="15096.0" y="15497.6"/>
+    <waypoint alt="45.0" name="AF" x="-364.1" y="-174.0"/>
+    <waypoint alt="0.0" name="TD" x="550.7" y="543.6"/>
     <waypoint name="p1" x="13261.6" y="16565.8"/>
     <waypoint name="p2" x="13261.6" y="16565.8"/>
     <waypoint name="p3" x="13261.6" y="16565.8"/>
@@ -16,11 +21,6 @@
     <waypoint name="p6" x="13261.6" y="16565.8"/>
     <waypoint name="p7" x="13261.6" y="16565.8"/>
     <waypoint name="p8" x="13261.6" y="16565.8"/>
-    <waypoint name="A" x="-4032.9" y="-112.2"/>
-    <waypoint name="B" x="-20140.8" y="-19881.0"/>
-    <waypoint name="CAM" x="15096.0" y="15497.6"/>
-    <waypoint alt="45.0" name="AF" x="-364.1" y="-174.0"/>
-    <waypoint alt="0.0" name="TD" x="550.7" y="543.6"/>
     <waypoint name="_BASELEG" x="1338.3" y="-745.1"/>
   </waypoints>
   <exceptions/>
@@ -43,15 +43,15 @@
       <set value="0" var="autopilot_flight_time"/>
       <go from="HOME" pitch="15" throttle="1.0" vmode="throttle" wp="CLIMB"/>
     </block>
-    <block name="Standby" strip_button="Standby" strip_icon="home.png">
-      <circle radius="nav_radius" wp="STDBY"/>
-    </block>
     <block name="stay_p1">
       <stay wp="p1"/>
     </block>
     <block name="go_p2">
       <go wp="p2"/>
       <deroute block="stay_p1"/>
+    </block>
+    <block name="Standby" strip_button="Standby" strip_icon="home.png">
+      <circle radius="nav_radius" wp="STDBY"/>
     </block>
     <block name="route_p1">
       <go wp="p1"/>

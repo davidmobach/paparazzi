@@ -2,7 +2,7 @@
 
 <!-- Flying at 2 meters -->
 
-<flight_plan alt="149" ground_alt="147" lat0="51.990633" lon0="4.376789" max_dist_from_home="150" name="Rotorcraft Basic (Enac)" security_height="2">
+<flight_plan alt="150" ground_alt="147" lat0="51.990633" lon0="4.376789" max_dist_from_home="150" name="Rotorcraft Basic (Enac)" security_height="2">
   <header>
 #include "autopilot.h"
 </header>
@@ -11,8 +11,8 @@
     <waypoint name="CLIMB" x="0.0" y="5.0"/>
     <waypoint name="STDBY" x="-2.0" y="-5.0"/>
     <waypoint name="TD" x="5.6" y="-10.9"/>
-    <waypoint name="FLY1" x="0.5" y="4.0"/>
-    <waypoint name="FLY2" x="2.5" y="0.7"/>
+    <waypoint name="FLY1" x="-0.1" y="4.8"/>
+    <waypoint name="FLY2" x="2.6" y="0.5"/>
     <waypoint name="FLY3" x="-1.8" y="-2.3"/>
     <waypoint name="FLY4" x="-4.6" y="1.9"/>
     <waypoint lat="51.990639" lon="4.376807" name="p1"/>
